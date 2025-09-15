@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About • Bright Code Labz</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* Page-specific touches to complement your existing style.css */
+    .page-header {
+      background: #111;
+      color: #fff;
+      padding: 80px 20px 60px;
+      text-align: center;
+    }
+    .page-header h1 { font-size: 2.2rem; margin-bottom: 15px; }
+    .page-header p { max-width: 780px; margin: 0 auto; line-height: 1.8; color: #ddd; }
+
+    .section {
+      padding: 60px 20px;
+      background: #fff;
+    }
+    .section.alt { background: #f7f7f7; }
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .grid {
+      display: grid;
+      gap: 24px;
+    }
+    .grid-2 { grid-template-columns: 1fr 1fr; }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+    @media (max-width: 900px) {
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .card h3 { margin-bottom: 8px; color: #111; }
+    .muted { color: #555; }
+
+    .pill {
+      display: inline-block;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid #e5e5e5;
+      background: #fafafa;
+      color: #333;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding-left: 0;
+      display: grid;
+      gap: 14px;
+    }
+    .feature-list li {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 12px;
+      padding: 14px 16px;
+      line-height: 1.6;
+    }
+
+    .banner {
+      background: #000;
+      color: #fff;
+      padding: 40px 24px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+    }
+    .banner p { max-width: 820px; margin: 10px auto 0; color: #ddd; }
+    .cta {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      border: 1px solid #00adee;
+      color: #00adee;
+      text-decoration: none;
+      transition: background 0.25s, color 0.25s;
+    }
+    .cta:hover { background: #00adee; color: #000; }
+
+    .media {
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+      border-radius: 14px;
+      object-fit: cover;
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.07);
+    }
+
+    .kicker {
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: .82rem;
+      color: #777;
+      margin-bottom: 8px;
+    }
+
+    .lead {
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.85;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <ul class="nav-bar">
+      <li><a href="index.html">Home</a></li>
+      <li><a class="active" href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="beta.html">Beta</a></li>
+      <li><a href="downloads.html">Downloads</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="page-header">
+    <div class="container">
+      <h1>About Bright Code Labz</h1>
+      <p>
+        We build technology for everyone — disabled and non-disabled people alike. From everyday apps and creative software
+        to smart tech gadgets and safety-awareness tools, our mission is practical innovation that makes life easier, clearer,
+        and more independent. We have big ideas and even bigger concepts — and we turn them into grounded, usable products.
+      </p>
+    </div>
+  </header>
+
+  <!-- WHO WE ARE -->
+  <section class="section">
+    <div class="container grid grid-2">
+      <div>
+        <div class="kicker">Who we are</div>
+        <h2>Independent, hands-on, and accessibility-minded</h2>
+        <p class="lead">
+          Bright Code Labz is a small, focused studio that blends engineering with design.
+          We prototype fast, test with real people, and iterate until the experience feels effortless.
+          We don’t posture as a giant — we prefer to ship thoughtfully, learn quickly, and let the work speak for itself.
+        </p>
+        <div style="margin-top:14px;">
+          <span class="pill">Accessibility-first</span>
+          <span class="pill">Inclusive by default</span>
+          <span class="pill">Privacy-aware</span>
+          <span class="pill">Real-world testing</span>
+        </div>
+      </div>
+      <div>
+        <img src="assets/lab-team.jpg" alt="Developers collaborating on accessible product prototypes" class="media"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE BUILD -->
+  <section class="section alt">
+    <div class="container">
+      <div class="kicker">What we build</div>
+      <h2>From apps to smart gadget concepts</h2>
+      <div class="grid grid-2" style="margin-top:18px;">
+        <ul class="feature-list">
+          <li><strong>Everyday Apps & Software.</strong> Focused tools that save time, reduce friction, and work well with assistive technologies.</li>
+          <li><strong>Assistive Tech.</strong> Features and products designed for low-vision, blind, D/deaf, and neurodivergent users — accessible for all.</li>
+          <li><strong>Safety Awareness Tech.</strong> Subtle alerts, location and context cues, and clearer information at the right moment.</li>
+          <li><strong>Creative & Audio Tools.</strong> Thoughtful workflows for makers, producers, and developers who need usable power.</li>
+        </ul>
+        <div>
+          <img src="assets/dev-desk.jpg" alt="Close-up of a prototype device and screen-reader friendly UI" class="media"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRINCIPLES -->
+  <section class="section">
+    <div class="container grid grid-3">
+      <div class="card">
+        <h3>Design for real life</h3>
+        <p class="muted">We start with lived scenarios and keep the interface honest: fewer steps, clearer states, better defaults.</p>
+      </div>
+      <div class="card">
+        <h3>Accessibility is baseline</h3>
+        <p class="muted">Screen reader support, strong contrast, keyboard use, and sensory-friendly interactions are part of the first build.</p>
+      </div>
+      <div class="card">
+        <h3>Build small, learn fast</h3>
+        <p class="muted">Prototype, test, iterate. We improve in the open with real feedback — then scale when it’s right to do so.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section class="section alt">
+    <div class="container grid grid-2">
+      <div>
+        <div class="kicker">How we work</div>
+        <h2>Discovery, prototyping, iteration</h2>
+        <p class="lead">
+          We keep process lean. Discovery maps the problem; prototypes validate the path; iteration refines the feel. 
+          The result is software and devices that are straightforward to use and dependable day-to-day.
+        </p>
+        <ul class="feature-list" style="margin-top:12px;">
+          <li><strong>Discovery:</strong> user goals, constraints, and success measures.</li>
+          <li><strong>Prototype:</strong> testable flows and hardware mockups.</li>
+          <li><strong>Iterate:</strong> shorten rough edges, strengthen clarity, improve performance.</li>
+        </ul>
+      </div>
+      <div>
+        <img src="assets/whiteboard-concepts.jpg" alt="Whiteboard of concept sketches and user flows" class="media"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section class="section">
+    <div class="container banner">
+      <h2>We’re building for everyone</h2>
+      <p>
+        If you care about usable products that include more people without adding complexity, we’d love to talk.
+        Whether it’s an app, a workflow tool, or a smart device concept — let’s explore it together.
+      </p>
+      <a class="cta" href="contact.html">Contact Bright Code Labz</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="sitemap.html">Sitemap</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+    </div>
+    <p>&copy; 2025 Bright Code Labz. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

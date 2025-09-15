@@ -1,0 +1,29 @@
+Initial website skeleton created with navigation bar (Home, About, Services, Portfolio, Contact, Beta, Downloads).
+About page styled with large black hero header and centered introduction text.
+Added Bright Code Labz mission statement focusing on accessibility and innovation.
+Created Services, Portfolio, Contact placeholder pages for navigation flow.
+Beta page introduced with simple structure for Veya assistant testing.
+Veya image placed in Beta page with black header and white body layout.
+Centered Veya portrait in body section with text box and status button aligned.
+Paragraph input box added to Beta page with Enter to send, Shift+Enter for new line.
+Questions integrated from assets/questions.txt with responses spoken aloud.
+Unknown questions routed into assets/i-dont-know.txt for later review.
+Check status button added, cycling through spoken updates from oldest to newest.
+Button text changed to “What’s new” for clearer meaning.
+Speech synthesis updated to prefer macOS Samantha voice for natural responses.
+Styling of Beta page matched to About page with large header and clean card layout.
+Veya input/output logic refined to trim input, ignore comments, and normalize text matching.
+Updates system finalized to read all changes directly from assets/updates.txt.
+Initial Bright Code Labz website created with navigation and placeholder pages.
+About page styled with large black header and introduction text.
+Added mission statement describing accessibility and innovation focus.
+Services, Portfolio, and Contact pages connected to navigation.
+Beta page introduced with layout for Veya assistant testing.
+Veya image centered with text input and status button.
+Text input linked to assets/questions.txt for answers.
+Unknown questions logged into assets/i-dont-know.txt for review.
+“What’s new” button added to speak updates from oldest to newest.
+Updated to prefer macOS Samantha voice for spoken answers.
+Added popup Live Chat mode with voice recognition and animated circle.
+Live Chat now plays a greeting, then beeps to indicate listening, chimes when you finish, and speaks back answers.
+Soft inviting sounds replaced the default beep and chime for a smoother experience.

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Veya — Unknowns</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root { font: 16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; }
+    body { margin:0; background:#0b0b0b; color:#f4f4f4; }
+    .container { max-width:1100px; margin:0 auto; padding:28px 16px 48px; }
+    .card { background:#141414; border:1px solid #242424; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,.38); padding:22px; }
+    h1 { margin:0 0 12px; font-weight:800; }
+    .row { display:flex; gap:10px; margin: 10px 0 16px; flex-wrap:wrap; }
+    button { padding:10px 14px; border:0; border-radius:10px; background:#2b7cff; color:#fff; cursor:pointer; font-weight:600; }
+    button.secondary { background:#2a2a2a; }
+    textarea { width:100%; min-height: 320px; background:#0e0e0e; color:#fff; border:1px solid #222; border-radius:12px; padding:12px; }
+    .meta { margin-top:10px; color:#9aa3ad; font-size:.95rem; }
+    .ok { color:#7fe089; } .warn { color:#ffb86b; }
+    a { color:#a7c7ff; text-decoration:none; padding:10px 14px; border-radius:10px; border:1px solid #2a2a2a; background:#1a1a1a; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Unknown Inputs</h1>
+      <div class="row">
+        <button id="refreshBtn" class="secondary">Refresh</button>
+        <button id="exportBtn" class="secondary">Export as i-dont-know.txt</button>
+        <button id="clearLocalBtn" class="secondary">Clear LOCAL list</button>
+        <a href="beta.html">Back to Beta</a>
+      </div>
+      <textarea id="box" aria-label="Unknown items"></textarea>
+      <div id="status" class="meta"></div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      "use strict";
+      const STORAGE_UNKNOWN = "veya_unknowns_v1";
+      const box = document.getElementById("box");
+      const status = document.getElementById("status");
+      const refreshBtn = document.getElementById("refreshBtn");
+      const exportBtn = document.getElementById("exportBtn");
+      const clearLocalBtn = document.getElementById("clearLocalBtn");
+
+      function loadLocal(){ try { return JSON.parse(localStorage.getItem(STORAGE_UNKNOWN) || "[]"); } catch { return []; } }
+      function saveLocal(list){ try { localStorage.setItem(STORAGE_UNKNOWN, JSON.stringify(list)); } catch {} }
+      async function serverCount(){ try { const r = await fetch("/unknown-count"); const j = await r.json(); return j && typeof j.count==="number" ? j.count : 0; } catch { return 0; } }
+      function render(){
+        const list = loadLocal();
+        box.value = list.map(x => x.text).join("\n");
+        status.textContent = `Local: ${list.length} | On server file: loading…`;
+        serverCount().then(c => status.textContent = `Local: ${list.length} | On server file: ${c}`);
+      }
+      function download(name, text){
+        const blob = new Blob([text], { type:"text/plain;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a"); a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+      }
+
+      refreshBtn.addEventListener("click", render);
+      exportBtn.addEventListener("click", () => {
+        const lines = (box.value || "").split("\n").filter(Boolean);
+        download("i-dont-know.txt", lines.join("\n"));
+        status.textContent = `Exported ${lines.length} item(s) to i-dont-know.txt.`; status.className = "meta ok";
+      });
+      clearLocalBtn.addEventListener("click", () => {
+        saveLocal([]); render(); status.textContent = "Cleared local list. Server file stays intact."; status.className = "meta warn";
+      });
+
+      render();
+    })();
+  </script>
+</body>
+</html>

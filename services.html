@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services • Bright Code Labz</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* Page-specific styles to complement style.css */
+    .page-header {
+      background: #111;
+      color: #fff;
+      padding: 80px 20px 60px;
+      text-align: center;
+    }
+    .page-header h1 { font-size: 2.2rem; margin-bottom: 14px; }
+    .page-header p { max-width: 820px; margin: 0 auto; line-height: 1.8; color: #ddd; }
+
+    .section { padding: 60px 20px; background: #fff; }
+    .section.alt { background: #f7f7f7; }
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .grid { display: grid; gap: 22px; }
+    .grid-2 { grid-template-columns: 1fr 1fr; }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 960px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .card h3 { margin-bottom: 8px; color: #111; }
+    .muted { color: #555; }
+
+    .kicker {
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: .82rem;
+      color: #777;
+      margin-bottom: 8px;
+    }
+
+    .feature-list {
+      list-style: none; padding-left: 0; display: grid; gap: 12px;
+    }
+    .feature-list li {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 12px;
+      padding: 12px 14px;
+      line-height: 1.6;
+    }
+
+    .pill {
+      display: inline-block; font-size: .85rem; padding: 6px 10px;
+      border-radius: 999px; background:#fafafa; border:1px solid #e5e5e5;
+      margin: 0 8px 8px 0; color:#333;
+    }
+
+    .deliverables { display: grid; gap: 10px; margin-top: 10px; }
+    .deliverables span {
+      border: 1px dashed #e5e5e5; border-radius: 10px; padding: 8px 12px; font-size: .95rem;
+      background:#fff;
+    }
+
+    .banner {
+      background: #000; color: #fff; padding: 40px 24px;
+      border-radius: 16px; text-align: center;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+    }
+    .banner p { max-width: 840px; margin: 10px auto 0; color:#ddd; }
+    .cta {
+      display: inline-block; margin-top: 16px; padding: 12px 18px; border-radius: 10px;
+      border: 1px solid #00adee; color: #00adee; text-decoration: none;
+      transition: background .25s, color .25s;
+    }
+    .cta:hover { background: #00adee; color: #000; }
+
+    .faq dt {
+      font-weight: 700; margin-top: 14px; color:#111;
+    }
+    .faq dd { margin: 6px 0 0 0; color:#555; }
+
+    .note {
+      font-size: .95rem; color:#555; background:#fff; border:1px solid rgba(0,0,0,.06);
+      border-radius: 10px; padding: 12px 14px; margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <ul class="nav-bar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="active" href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="beta.html">Beta</a></li>
+      <li><a href="downloads.html">Downloads</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="page-header">
+    <div class="container">
+      <h1>Services</h1>
+      <p>
+        We design and build practical technology for everyone — from everyday apps to assistive tools and smart-gadget concepts.
+        Our focus is accessibility, clarity, and shipping things that actually make life easier.
+      </p>
+    </div>
+  </header>
+
+  <!-- CORE SERVICES -->
+  <section class="section">
+    <div class="container">
+      <div class="kicker">What we do</div>
+      <h2>Hands-on product design & development</h2>
+
+      <div class="grid grid-3" style="margin-top:18px;">
+        <div class="card">
+          <h3>Assistive Technology</h3>
+          <p class="muted">
+            Inclusive features and devices for low-vision, blind, D/deaf, and neurodivergent users — built to benefit everyone.
+          </p>
+          <ul class="feature-list" style="margin-top:10px;">
+            <li>Screen-reader and keyboard-first interfaces</li>
+            <li>Spatial/audio cue systems & safety alerts</li>
+            <li>High-contrast, reduced motion, sensory-friendly modes</li>
+          </ul>
+          <div class="deliverables">
+            <span>Accessible UI kits</span>
+            <span>Prototype devices</span>
+            <span>WCAG improvements</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Everyday Apps & Tools</h3>
+          <p class="muted">
+            Focused utilities that reduce friction and save time — designed for clarity and speed on desktop and mobile.
+          </p>
+          <ul class="feature-list" style="margin-top:10px;">
+            <li>Task, workflow, and productivity tools</li>
+            <li>Lightweight dashboards & control panels</li>
+            <li>Offline-friendly, low-latency builds</li>
+          </ul>
+          <div class="deliverables">
+            <span>Clickable prototypes</span>
+            <span>Beta builds</span>
+            <span>Documentation</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Safety-Awareness Tech</h3>
+          <p class="muted">
+            Contextual signals that enhance independence: subtle alerts, route awareness, and environment cues.
+          </p>
+          <ul class="feature-list" style="margin-top:10px;">
+            <li>Location & proximity prompts</li>
+            <li>Haptic/audio guidance patterns</li>
+            <li>Privacy-first sensing concepts</li>
+          </ul>
+          <div class="deliverables">
+            <span>Signal design packs</span>
+            <span>Prototype firmware</span>
+            <span>Field test plans</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Creative & Audio Tools</h3>
+          <p class="muted">
+            Utilities for musicians, creators, and developers — usable power with clear, accessible interfaces.
+          </p>
+          <ul class="feature-list" style="margin-top:10px;">
+            <li>Audio utilities & batch tools</li>
+            <li>Accessible controls & readable states</li>
+            <li>Cross-platform packaging</li>
+          </ul>
+          <div class="deliverables">
+            <span>Plugins / CLIs</span>
+            <span>UX specs</span>
+            <span>Release builds</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>R&D Prototyping</h3>
+          <p class="muted">
+            Fast proofs-of-concept to de-risk ideas early — iterate with real users before committing to full builds.
+          </p>
+          <ul class="feature-list" style="margin-top:10px;">
+            <li>Clickable flows & device mockups</li>
+            <li>Feasibility spikes & benchmarks</li>
+            <li>Usability sessions & notes</li>
+          </ul>
+          <div class="deliverables">
+            <span>POC repos</span>
+            <span>Prototype kits</span>
+            <span>Findings report</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Accessibility Audits & Consulting</h3>
+          <p class="muted">
+            Practical guidance to raise baseline accessibility without over-engineering. Clear fixes, measurable wins.
+          </p>
+          <ul class="feature-list" style="margin-top:10px;">
+            <li>WCAG checks & quick wins</li>
+            <li>Keyboard & screen-reader flows</li>
+            <li>Design tokens for contrast & motion</li>
+          </ul>
+          <div class="deliverables">
+            <span>Audit checklist</span>
+            <span>Before/after diffs</span>
+            <span>Roadmap items</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section class="section alt">
+    <div class="container">
+      <div class="kicker">Process</div>
+      <h2>Small steps, steady progress</h2>
+
+      <div class="grid grid-2" style="margin-top:18px;">
+        <div class="card">
+          <h3>1) Discover</h3>
+          <p class="muted">Clarify goals, constraints, and who benefits. Map success and risks early.</p>
+          <div class="pill">User goals</div><div class="pill">Edge cases</div><div class="pill">Metrics</div>
+        </div>
+        <div class="card">
+          <h3>2) Prototype</h3>
+          <p class="muted">Clickable flows or device mockups to test ideas with real people quickly.</p>
+          <div class="pill">Interactive demos</div><div class="pill">Concept firmware</div><div class="pill">Design tokens</div>
+        </div>
+        <div class="card">
+          <h3>3) Iterate</h3>
+          <p class="muted">Refine the feel, reduce steps, improve accessibility, and harden performance.</p>
+          <div class="pill">Usability fixes</div><div class="pill">Contrast & motion</div><div class="pill">Latency trims</div>
+        </div>
+        <div class="card">
+          <h3>4) Ship</h3>
+          <p class="muted">Deliver a stable build with docs and a short list of next steps.</p>
+          <div class="pill">Docs</div><div class="pill">Release notes</div><div class="pill">Roadmap</div>
+        </div>
+      </div>
+
+      <div class="note">
+        <strong>Accessibility is baseline:</strong> screen-reader labels, keyboard paths, sensible focus order, strong contrast,
+        readable type, and motion-safe defaults are part of the first build, not a bolt-on.
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES / WAYS TO ENGAGE -->
+  <section class="section">
+    <div class="container">
+      <div class="kicker">Ways to work together</div>
+      <h2>Pick a starting point</h2>
+
+      <div class="grid grid-3" style="margin-top:18px;">
+        <div class="card">
+          <h3>Access Starter</h3>
+          <p class="muted">Quick audit + fixes you can ship this month. Ideal for improving an existing product.</p>
+          <ul class="feature-list" style="margin-top:10px;">
+            <li>Baseline WCAG review</li>
+            <li>Prioritized fix list</li>
+            <li>1 iteration pass</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Prototype Sprint</h3>
+          <p class="muted">Test a new idea with a working demo, then decide the next move with confidence.</p>
+          <ul class="feature-list" style="margin-top:10px;">
+            <li>Clickable or device prototype</li>
+            <li>Usability session & notes</li>
+            <li>Next-step roadmap</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Build & Ship</h3>
+          <p class="muted">A scoped build with accessibility baked in and documentation for handover.</p>
+          <ul class="feature-list" style="margin-top:10px;">
+            <li>Release build & docs</li>
+            <li>Accessibility checklist</li>
+            <li>Support window</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section alt">
+    <div class="container">
+      <div class="kicker">FAQ</div>
+      <h2>Good to know</h2>
+      <dl class="faq">
+        <dt>Do you only build assistive tech?</dt>
+        <dd>No — we build for everyone. Accessibility helps more people use your product comfortably.</dd>
+
+        <dt>How do you test accessibility?</dt>
+        <dd>Keyboard paths, screen-reader checks (VoiceOver/NVDA), contrast audits, reduced-motion variants, and real-world tasks.</dd>
+
+        <dt>What do you deliver at the end?</dt>
+        <dd>Working build or prototype, docs, an improvement list, and clear next steps. No fluff.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container banner">
+      <h2>Have an idea or product that needs clarity?</h2>
+      <p>Tell us what you’re building. We’ll help shape it into something practical, accessible, and ready to use.</p>
+      <a class="cta" href="contact.html">Contact Bright Code Labz</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="sitemap.html">Sitemap</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+    </div>
+    <p>&copy; 2025 Bright Code Labz. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
